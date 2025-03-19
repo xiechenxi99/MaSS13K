@@ -16,7 +16,7 @@ Lei zhang<sup>1,2</sup>
 ![MaSS13K Dataset](fig/mas13k.png)
 ## ⏰ TODO
 - [x] **2025.03.19**: Create repo.
-- [ ] Release dataset.
+- [ ] Release MaSS13K Dataset.
 - [ ] Release code.
 
 
@@ -26,17 +26,19 @@ Lei zhang<sup>1,2</sup>
 ## 🌟 Our Framework
 
 ![MaSSFormer](fig/Framework.png)
+Architecture of MaSSFormer. The model architecture is shown on the top left corner, including the image encoder, pixel decoder and transformer decoder. The detailed structure of the high-resolution pixel decoder is shown on the right of this figure.
+
 ## MaSS13K-Benchmark
 
 
 ### Qualitative Comparison
 ![Visual Comparison](fig/VisualComp.png)
-
+Qualitative comparisons of MaSSFormer with other three baseline methods.
 
 ### Quantitative Comparison
 
 ![Mass13K-Benchmark](fig/QuantitativeComp.png)
-
+Quantitative evaluation on MaSS13K validation and test sets.
 
 
 
