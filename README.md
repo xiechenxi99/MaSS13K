@@ -26,7 +26,7 @@ Lei zhang<sup>1,2</sup>
 ## 🌟 Our Framework
 
 
-## MaSS-Benchmark
+## MaSS13K-Benchmark
 
 
 ### Qualitative Comparison
@@ -54,6 +54,6 @@ If you have any questions, please contact: chenxi.xie@connect.polyu.hk
 <details>
 <summary>statistics</summary>
 
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=xiechenxi99/MaSS13K)
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=xiechenxi99.MaSS13K)
 
 </details>
