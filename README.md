@@ -13,11 +13,11 @@ Lei zhang<sup>1,2</sup>
 <sup>1</sup>The Hong Kong Polytechnic University, <sup>2</sup>OPPO Research Institute
 </div>
 
-
+![MaSS13K Dataset](fig/mas13k.png)
 ## ⏰ TODO
 - [x] **2025.03.19**: Create repo.
-- [ ] Release dataset
-- [ ] Release code
+- [ ] Release dataset.
+- [ ] Release code.
 
 
 ## 🌟 MaSS13K Datasets
@@ -25,17 +25,17 @@ Lei zhang<sup>1,2</sup>
 
 ## 🌟 Our Framework
 
-
+![MaSSFormer](fig/Framework.png)
 ## MaSS13K-Benchmark
 
 
 ### Qualitative Comparison
-
+![Visual Comparison](fig/VisualComp.png)
 
 
 ### Quantitative Comparison
 
-
+![Mass13K-Benchmark](fig/QuantitativeComp.png)
 
 
 
