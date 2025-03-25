@@ -46,7 +46,16 @@ Qualitative comparisons of MaSSFormer with other three baseline methods.
 Quantitative evaluation on MaSS13K validation and test sets.
 
 
+## 🌏 Citation
 
+```bash
+@InProceedings{Xie2025mass13k,
+    author    = {Chenxi Xie, Minghan Li, Hui Zeng, Jun Luo and Zhang, Lei},
+    title     = {MaSS13K: A Matting-level Semantic Segmentation Benchmark},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year      = {2025}
+}
+```
 
 
 ### License
