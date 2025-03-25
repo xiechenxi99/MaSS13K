@@ -12,10 +12,13 @@ Lei zhang<sup>1,2</sup>
 
 <sup>1</sup>The Hong Kong Polytechnic University, <sup>2</sup>OPPO Research Institute
 </div>
+🚩 Accepted by CVPR2025
 
+<a href='[https://arxiv.org/abs/2503.18364'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
 ![MaSS13K Dataset](fig/mas13k.png)
 ## ⏰ TODO
 - [x] **2025.03.19**: Create repo.
+- [x] **2025.03.25**： Release arxiv paper.
 - [ ] Release MaSS13K Dataset.
 - [ ] Release code.
 
