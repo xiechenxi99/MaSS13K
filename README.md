@@ -20,11 +20,12 @@ Lei zhang<sup>1,2</sup>
 
 ![MaSS13K Dataset](fig/mas13k.png)
 ## ⏰ TODO
-- [x] **2025.03.19**: Create repo.
-- [x] **2025.03.25**： Release arxiv paper.
-- [x] **2025.04.08**: Release MaSS13K Dataset.
+- [x]  Create repo.
+- [x]  Release arxiv paper.
+- [x]  Release MaSS13K Dataset.
+- [x]  Release code.
 - [ ] Upload dataset to Huggingface.
-- [ ] Release code.
+
 
 
 ## 🌟 MaSS13K Datasets
