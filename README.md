@@ -20,15 +20,19 @@ Lei zhang<sup>1,2</sup>
 
 ![MaSS13K Dataset](fig/mas13k.png)
 ## ⏰ TODO
-- [x] **2025.03.19**: Create repo.
-- [x] **2025.03.25**： Release arxiv paper.
-- [x] **2025.04.08**: Release MaSS13K Dataset.
-- [ ] Upload dataset to Huggingface.
-- [ ] Release code.
+- [x] Create repo.
+- [x] Release arxiv paper.
+- [x] Release MaSS13K Dataset.
+- [x] Release code.
+
+
 
 
 ## 🌟 MaSS13K Datasets
 The dataset now is available :[`GoogleDrive`](https://drive.google.com/drive/folders/1NooQARLS4epj6GTsf_6hzphl1APUdW7t?usp=sharing)
+
+Download the dataset and extract in mmsegmentation/data
+
 
 ## 🌟 Our Framework
 
@@ -47,6 +51,23 @@ Qualitative comparisons of MaSSFormer with other three baseline methods.
 ![Mass13K-Benchmark](fig/QuantitativeComp.png)
 Quantitative evaluation on MaSS13K validation and test sets.
 
+## 1️⃣Enviroment
+
+``` bash
+conda create -n massformer python=3.10
+conda activate massformer
+pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+pip install mmcv==2.0.0rc2  mmengine==0.10.3  
+cd mmsegmentation
+pip install -e .
+```
+## 2️⃣Training
+1. Download the dataset.  
+2. Extract the dataset and put them under data/
+3. Modify the data path in "configs/massformer/massformer_r50_8xb2-90k_mass-1024x1024.py" and "configs/\_base_/datasets/mass13k.py"
+```bash
+tools/dist_train.sh configs/massformer/massformer_r50_8xb2-90k_mass-1024x1024.py 4
+```
 
 ## 🌏 Citation
 

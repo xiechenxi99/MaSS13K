@@ -124,7 +124,8 @@ class FPNbaseline(nn.Module):
         mask_features,edge_feature, multi_scale_memorys = self.pixel_decoder(out)
 
         return mask_features,edge_feature, multi_scale_memorys
-
+    def init_weights(self):
+        pass
 
 
 @MODELS.register_module()
@@ -153,18 +154,11 @@ class MaSSFormerHead(MMDET_Mask2FormerHead):
         self.out_channels = num_classes
         self.ignore_index = ignore_index
         self.pixel_decoder=FPNbaseline(pixel_decoder=kwargs['pixel_decoder'])
-        # self.transformer_decoder = PEMCADecoder()
         self.loss_edge = nn.BCELoss()
-        # self.edge_loss = SobelLoss()
 
         feat_channels = kwargs['feat_channels']
         
         self.cls_embed = nn.Linear(feat_channels, self.num_classes + 1)
-        # self.mask_embed_8x = nn.Sequential(
-        #     nn.Linear(feat_channels, feat_channels), nn.ReLU(inplace=True),
-        #     nn.Linear(feat_channels, feat_channels), nn.ReLU(inplace=True),
-        #     nn.Linear(feat_channels, out_channels))
-        # self.mask_embed_2x = nn.Linear(feat_channels, out_channels)
 
     def _forward_aux(self,mask_embed,decoder_out,mask_feature):
         decoder_out = self.transformer_decoder.post_norm(decoder_out)
@@ -452,7 +446,6 @@ class MaSSFormerHead(MMDET_Mask2FormerHead):
                 query_key_padding_mask=None,
                 # here we do not apply masking on padded region
                 key_padding_mask=None)
-            # next_size = [k*2**((i+1) // self.num_transformer_feat_level) for k in list(multi_scale_memorys[0].shape[-2:])]
         
             next_size = multi_scale_memorys[(i+1) % self.num_transformer_feat_level].shape[-2:]
             if i == self.num_transformer_decoder_layers-1:

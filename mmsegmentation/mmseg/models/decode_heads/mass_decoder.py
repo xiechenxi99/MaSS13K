@@ -241,7 +241,6 @@ class LSE(nn.Module):
         self.dcn3 = DeformLayer(in_dim//2+3, inter_channels//2, 3,with_upsample=False)
         self.conv1 = nn.Conv2d(2,1,kernel_size=7,padding=3)
         self.conv2 = nn.Conv2d(2,1,kernel_size=7,padding=3)
-        self.sep = nn.Conv2d(inter_channels,inter_channels,3,padding=1,groups=inter_channels)
         self.cbn2=ConvBNReLU(inter_channels,inter_channels,1,padding=0,norm=nn.BatchNorm2d)
     def forward(self,img,feat4):
         feat4 = F.interpolate(feat4,size=(img.shape[2]//2,img.shape[3]//2),mode='bilinear',align_corners=False)
@@ -263,7 +262,6 @@ class LSE(nn.Module):
         x2 = x2*x2_attn+x2
 
         y  = torch.cat([x1,x2],dim=1)
-        # x2 = self.sep(x1)
         z = self.cbn2(y)
         return z
 
@@ -272,10 +270,8 @@ class ERM(nn.Module):
     def __init__(self,in_channels,inter_channels):
         super().__init__()
         self.conv1=nn.Conv2d(in_channels,inter_channels,1,1,0)
-        # self.convsep3 = nn.Conv2d(64,64,3,1,1,groups=64)
         self.conv2 = nn.Conv2d(inter_channels,in_channels,1,1,0)
         self.dcn = DeformLayer(inter_channels, inter_channels, 3,with_upsample=False)
-        self.act = nn.GELU()
         self.norm = nn.BatchNorm2d(in_channels)
     def forward(self,edge,body):
         edge = torch.sigmoid(edge)
@@ -328,7 +324,7 @@ class HR_Pixel_Decoder(nn.Module):
 
         self.in_projections = nn.ModuleList([ConvBNReLU(in_dim, inter_channels, 1, norm=norm, padding=0)
                                              for in_dim in self.in_channels])
-        self.out = nn.ModuleList([ConvBNReLU(inter_channels, inter_channels*2, 1, padding=0, norm=norm) for _ in range(5)])
+        self.out = nn.ModuleList([ConvBNReLU(inter_channels, inter_channels*2, 1, padding=0, norm=norm) for _ in range(4)])
 
         self.conv_avg = ConvBNReLU(self.in_channels[-1], inter_channels, 1, padding=0, norm=norm)
 
@@ -356,7 +352,7 @@ class HR_Pixel_Decoder(nn.Module):
         img = features[0]
         x_2 = self.LSE(img,x_2)
 
-        x_up = F.interpolate(x_8,size=(features[0].shape[2]//2,features[0].shape[3]//2),mode='bilinear',align_corners=False)
+        x_up = F.interpolate(x_up,size=(features[0].shape[2]//2,features[0].shape[3]//2),mode='bilinear',align_corners=False)
         x_edge = self.edge_conv(x_up+x_2)
         x_out = self.edge_rec(x_2,x_up)
 

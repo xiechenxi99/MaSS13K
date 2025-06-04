@@ -1,0 +1,31 @@
+Looking in indexes: http://mirrors.oppo.local/pypi/
+Looking in links: https://download.openmmlab.com/mmcv/dist/cu121/torch2.2.0/index.html
+Collecting mmcv
+  Using cached https://download.openmmlab.com/mmcv/dist/cu121/torch2.2.0/mmcv-2.2.0-cp310-cp310-manylinux1_x86_64.whl (96.8 MB)
+Requirement already satisfied: addict in /home/notebook/data/personal/S9055029/conda_env/massformer/lib/python3.10/site-packages (from mmcv) (2.4.0)
+Requirement already satisfied: mmengine>=0.3.0 in /home/notebook/data/personal/S9055029/conda_env/massformer/lib/python3.10/site-packages (from mmcv) (0.10.3)
+Requirement already satisfied: numpy in /home/oppoer/.local/lib/python3.10/site-packages (from mmcv) (1.26.4)
+Requirement already satisfied: packaging in /home/oppoer/.local/lib/python3.10/site-packages (from mmcv) (24.1)
+Requirement already satisfied: Pillow in /home/oppoer/.local/lib/python3.10/site-packages (from mmcv) (10.4.0)
+Requirement already satisfied: pyyaml in /home/oppoer/.local/lib/python3.10/site-packages (from mmcv) (6.0.2)
+Requirement already satisfied: yapf in /home/notebook/data/personal/S9055029/conda_env/massformer/lib/python3.10/site-packages (from mmcv) (0.40.2)
+Requirement already satisfied: opencv-python>=3 in /home/oppoer/.local/lib/python3.10/site-packages (from mmcv) (4.10.0.84)
+Requirement already satisfied: matplotlib in /home/oppoer/.local/lib/python3.10/site-packages (from mmengine>=0.3.0->mmcv) (3.9.2)
+Requirement already satisfied: rich in /home/notebook/data/personal/S9055029/conda_env/massformer/lib/python3.10/site-packages (from mmengine>=0.3.0->mmcv) (13.4.2)
+Requirement already satisfied: termcolor in /home/notebook/data/personal/S9055029/conda_env/massformer/lib/python3.10/site-packages (from mmengine>=0.3.0->mmcv) (2.4.0)
+Requirement already satisfied: contourpy>=1.0.1 in /home/oppoer/.local/lib/python3.10/site-packages (from matplotlib->mmengine>=0.3.0->mmcv) (1.2.1)
+Requirement already satisfied: cycler>=0.10 in /home/oppoer/.local/lib/python3.10/site-packages (from matplotlib->mmengine>=0.3.0->mmcv) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /home/oppoer/.local/lib/python3.10/site-packages (from matplotlib->mmengine>=0.3.0->mmcv) (4.53.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /home/oppoer/.local/lib/python3.10/site-packages (from matplotlib->mmengine>=0.3.0->mmcv) (1.4.5)
+Requirement already satisfied: pyparsing>=2.3.1 in /home/notebook/data/personal/S9055029/conda_env/massformer/lib/python3.10/site-packages (from matplotlib->mmengine>=0.3.0->mmcv) (3.1.2)
+Requirement already satisfied: python-dateutil>=2.7 in /home/oppoer/.local/lib/python3.10/site-packages (from matplotlib->mmengine>=0.3.0->mmcv) (2.8.2)
+Requirement already satisfied: six>=1.5 in /home/notebook/data/personal/S9055029/conda_env/massformer/lib/python3.10/site-packages (from python-dateutil>=2.7->matplotlib->mmengine>=0.3.0->mmcv) (1.16.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /home/oppoer/.local/lib/python3.10/site-packages (from rich->mmengine>=0.3.0->mmcv) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /home/oppoer/.local/lib/python3.10/site-packages (from rich->mmengine>=0.3.0->mmcv) (2.18.0)
+Requirement already satisfied: mdurl~=0.1 in /home/oppoer/.local/lib/python3.10/site-packages (from markdown-it-py>=2.2.0->rich->mmengine>=0.3.0->mmcv) (0.1.2)
+Requirement already satisfied: importlib-metadata>=6.6.0 in /home/notebook/data/personal/S9055029/conda_env/massformer/lib/python3.10/site-packages (from yapf->mmcv) (8.4.0)
+Requirement already satisfied: platformdirs>=3.5.1 in /home/oppoer/.local/lib/python3.10/site-packages (from yapf->mmcv) (4.2.2)
+Requirement already satisfied: tomli>=2.0.1 in /home/notebook/data/personal/S9055029/conda_env/massformer/lib/python3.10/site-packages (from yapf->mmcv) (2.0.1)
+Requirement already satisfied: zipp>=0.5 in /home/notebook/data/personal/S9055029/conda_env/massformer/lib/python3.10/site-packages (from importlib-metadata>=6.6.0->yapf->mmcv) (3.20.0)
+Installing collected packages: mmcv
+Successfully installed mmcv-2.2.0

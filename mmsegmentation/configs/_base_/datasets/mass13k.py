@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'MaSSDataset'
-data_root = 'data/mass13k'
+data_root = 'data/mass13k/msem'
 
 num_classes = 7
 

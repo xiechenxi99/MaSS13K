@@ -27,7 +27,7 @@ model = dict(
         init_cfg=dict(type='Pretrained', checkpoint='/home/notebook/data/personal/S9055029/cache/resnet50-0676ba61.pth')),
         
     decode_head=dict(
-        type='MaSSFormerHeadE',
+        type='MaSSFormerHead',
         in_channels=[256, 512, 1024, 2048],
         strides=[4, 8, 16, 32],
         feat_channels=256,
@@ -161,20 +161,20 @@ test_pipeline = [
 train_dataloader = dict(batch_size=4, dataset=dict(pipeline=train_pipeline))
 val_dataloader = dict(dataset=dict(
         type='MaSSDataset',
-        data_root='data/msem/msem',
+        data_root='data/mass13k/msem',
         data_prefix=dict(
             img_path='images_pad/val', seg_map_path='annotations/val'),
         pipeline=test_pipeline))
 test_dataloader = dict(dataset=dict(
         type='MaSSDataset',
-        data_root='data/msem/msem',
+        data_root='data/mass13k/msem',
         data_prefix=dict(
             img_path='images_copy/val', seg_map_path='annotations/val'),
         pipeline=test_pipeline))
 # optimizer
 embed_multi = dict(lr_mult=1, decay_mult=0.0)
 optimizer = dict(
-    type='AdamW', lr=0.00032, weight_decay=0.05, eps=1e-8, betas=(0.9, 0.999))
+    type='AdamW', lr=0.0003, weight_decay=0.05, eps=1e-8, betas=(0.9, 0.999))
 optim_wrapper = dict(
     type='OptimWrapper',
     optimizer=optimizer,
