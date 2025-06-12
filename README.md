@@ -68,6 +68,9 @@ pip install -e .
 ```bash
 tools/dist_train.sh configs/massformer/massformer_r50_8xb2-90k_mass-1024x1024.py 4
 ```
+## 3️⃣Inference
+
+We provide a newly pre-trained weights in :[`GoogleDrive`](https://drive.google.com/drive/folders/1NooQARLS4epj6GTsf_6hzphl1APUdW7t?usp=sharing)
 
 ## 🌏 Citation
 
