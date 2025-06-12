@@ -57,7 +57,7 @@ Quantitative evaluation on MaSS13K validation and test sets.
 conda create -n massformer python=3.10
 conda activate massformer
 pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
-pip install mmcv==2.0.0rc2  mmengine==0.10.3  
+pip install mmcv==2.0.0rc4  mmengine==0.10.3  
 cd mmsegmentation
 pip install -e .
 ```
